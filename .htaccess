@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^cupcake? index.php
+RewriteRule ^credentials? adminlogin.php
+RewriteRule ^adminONLY? /admin/databasetowebpage.php

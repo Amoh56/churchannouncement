@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.caption {
+    text-align: center;
+    font-size: 14px;
+}

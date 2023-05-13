@@ -1,0 +1,48 @@
+form {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.salutation {
+    width: 100%;
+    text-align: center;
+    background-color: aquamarine;
+}
+.container {
+    border: 1px solid black;
+    max-width: 960px;
+    padding: 32px;
+    display: block;
+    margin: 20px 0 0 150px;
+    background-color: aquamarine;
+    /* width: 100vw; */
+    height: 100vh;
+    opacity: 0.89;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+
+
+
+}
+.member {
+    float: left;
+    background-color: white;
+    
+}
+.send-announcement {
+    float: right;
+    background-color: white;
+    
+}
+.admin {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 70px 0 auto 0;
+    background-color: white;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,3 @@
+*TO RUN THE PROJECT FIRST IMPORT THE SQL FILE FOUND IN DATABASE FOLDER.
+*ADMIN: Username= 'mwiti'
+	password= 'mwiti#6'
