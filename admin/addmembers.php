@@ -125,6 +125,7 @@
     <div class="adding-members">
         <h4>NB: <mark>Use lower case in jumuiya and do not include (st). e.g. joseph not st.joseph</mark></h4>
         <form action="insertmembers.php" method="POST">
+            <!-- hahahah -->
             <label for="jumuiya">Jumuiya</label>
             <input type="text" placeholder="Enter jumuiya name" name="jumuiya" required>
             <label for="firstame">First Name</label>
