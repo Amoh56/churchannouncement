@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin login form</title>
 </head>
 <body>
-    <form action="admin/validate.php" method="POST">
+    <form action="validate.php" method="POST">
     <div class="admin_login">
         <div class="imgcontainer">
-                <img src="admin.jpeg" alt="Login" class="avatar">
+                <img src="../admin.jpeg" alt="Login" class="avatar">
             </div>
             <div class="container">
                 <label for="uname">

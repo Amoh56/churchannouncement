@@ -10,11 +10,6 @@ function test_input($data) {
     return $data;
 }
 
-// Check if the user is not logged in, redirect back to the login page
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: /myprojo/adminlogin.php");
-    exit();
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adminname = test_input($_POST["uname"]);
@@ -28,19 +23,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ($user['password'] == $password)) {
             // Store the logged-in status in a session variable
             $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $_POST['uname']; // Use the 'uname' from the form
             header("Location: /myprojo/admin/databasetowebpage.php");
             exit(); // Terminate the script
         }
     }
 
     // If the loop completes without finding a valid user, redirect back to the login page
-    header("Location: /myprojo/adminlogin.php");
+    header("Location: /myprojo/admin/adminlogin.php");
     exit();
 }
 
 // If the script reaches this point, it means the user has not logged in or accessed this page directly without logging in
 // Add your code here to handle unauthorized access, such as redirecting to a login page or displaying an error message.
 session_destroy(); // Destroy the session and log the user out
-header("Location: /myprojo/adminlogin.php");
+header("Location: /myprojo/admin/adminlogin.php");
 exit();
 ?>

@@ -1,5 +1,13 @@
-<!-- this is the page that fetches the announcement requested by web user -->
 <?php
+session_start();
+
+// Check if the user is not logged in, redirect back to the login page
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: /myprojo/admin/adminlogin.php");
+    exit();
+}
+//<!-- this is the page that fetches the announcement requested by web user -->
+
 // PHP code to establish connection
 // with the localserver
 
@@ -144,6 +152,17 @@ $mysqli->close();
 			font-size: 24px;
 			color: #333; /* Set the icon color as desired */
 		}
+		.login-section {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+			align-items: left;
+        }
+
+        .login-section form {
+            display: block;
+            margin: left;
+        }
 		/* Media query for small screens */
 @media (max-width: 768px) {
   .container {
@@ -158,6 +177,26 @@ $mysqli->close();
 </style>
 
 <body>
+<div class="login-section">
+        <?php
+        // session_start();
+
+        // Check if the user is logged in
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+            echo "Logged in as: " . $_SESSION['username'] . " | ";
+			echo '<a href="logout.php">Logout</a>';
+
+
+        } else {
+            echo '
+            <form action="adminlogin.php" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>';
+        }
+        ?>
+    </div>
 	
 	<!-- admin page navigations begins here -->
 	<div class="admin-nav">
